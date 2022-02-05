@@ -120,7 +120,11 @@
         ctx.fill();
         ctx.closePath();
     }
+<<<<<<< HEAD
     // キー押下を検知
+=======
+    // キー押下を検知してパドル操作
+>>>>>>> e63576a (add new file)
     function keyDownHandler(e){
         if(e.key == "Right" || e.key == "ArrowRight") {
             rightPressed = true;
@@ -137,6 +141,16 @@
             leftPressed = false;
         }
     }
+<<<<<<< HEAD
+=======
+    //マウスでパドル操作
+    function mouseMoveHandler(e){
+        var relativeX = e.clientX - canvas.offsetLeft;
+        if((relativeX > paddleWidth/2) && (relativeX < canvas.width-paddleWidth/2)){
+            paddleX = relativeX - paddleWidth/2;
+        }
+    }
+>>>>>>> e63576a (add new file)
 
     //ブロック描画
     function drawBricks(){
@@ -189,7 +203,11 @@
         ctx.fillText("Life: " + lives, canvas.width-65, 20);
     }
 
+<<<<<<< HEAD
     //勝利判定
+=======
+    //クリア判定
+>>>>>>> e63576a (add new file)
     function gameClear(){
         if(score == brickColumnCount * brickRowCount * 100){
             alert("Game Clear!\nYou Win!!");
@@ -198,6 +216,7 @@
         }
     }
 
+<<<<<<< HEAD
     //マウスでパドル操作
     function mouseMoveHandler(e){
         var relativeX = e.clientX - canvas.offsetLeft;
@@ -222,6 +241,8 @@
 
 
 
+=======
+>>>>>>> e63576a (add new file)
 
 
 
@@ -247,8 +268,11 @@
     draw();
     
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> e63576a (add new file)
 </script>
 
 </body>
