@@ -46,7 +46,7 @@
         for (var c=0; c<brickColumnCount; c++){
             bricks[c] = [];
             for (var r=0; r<brickRowCount; r++){
-                bricks[c][r] = { x: 0, y: 0, status: 1 }; //連想配列？
+                bricks[c][r] = { x: 0, y: 0, status: 1 }; //連想配列
             }
         }
 
@@ -54,7 +54,6 @@
     document.addEventListener("keydown", keyDownHandler, false);
     document.addEventListener("keyup", keyUpHandler, false);
     document.addEventListener("mousemove", mouseMoveHandler, false);
-
 
 
     // ボール描画
@@ -120,11 +119,7 @@
         ctx.fill();
         ctx.closePath();
     }
-<<<<<<< HEAD
-    // キー押下を検知
-=======
     // キー押下を検知してパドル操作
->>>>>>> e63576a (add new file)
     function keyDownHandler(e){
         if(e.key == "Right" || e.key == "ArrowRight") {
             rightPressed = true;
@@ -141,8 +136,6 @@
             leftPressed = false;
         }
     }
-<<<<<<< HEAD
-=======
     //マウスでパドル操作
     function mouseMoveHandler(e){
         var relativeX = e.clientX - canvas.offsetLeft;
@@ -150,7 +143,6 @@
             paddleX = relativeX - paddleWidth/2;
         }
     }
->>>>>>> e63576a (add new file)
 
     //ブロック描画
     function drawBricks(){
@@ -203,11 +195,7 @@
         ctx.fillText("Life: " + lives, canvas.width-65, 20);
     }
 
-<<<<<<< HEAD
-    //勝利判定
-=======
     //クリア判定
->>>>>>> e63576a (add new file)
     function gameClear(){
         if(score == brickColumnCount * brickRowCount * 100){
             alert("Game Clear!\nYou Win!!");
@@ -216,33 +204,6 @@
         }
     }
 
-<<<<<<< HEAD
-    //マウスでパドル操作
-    function mouseMoveHandler(e){
-        var relativeX = e.clientX - canvas.offsetLeft;
-        if((relativeX > paddleWidth/2) && (relativeX < canvas.width-paddleWidth/2)){
-            paddleX = relativeX - paddleWidth/2;
-        }
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-=======
->>>>>>> e63576a (add new file)
 
 
 
@@ -264,15 +225,12 @@
         requestAnimationFrame(draw);
     }
     
-    // var interval = setInterval(draw, 10);
+    // var interval = setInterval(draw, 10); setIntervalよりrequestAnimationFrameを使ってみる
     draw();
     
 
-<<<<<<< HEAD
 
 
-=======
->>>>>>> e63576a (add new file)
 </script>
 
 </body>
